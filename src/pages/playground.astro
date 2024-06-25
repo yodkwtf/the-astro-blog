@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Counter from '../components/Counter.jsx';
+---
+
+<Layout title="Playground for Astro">
+  <section class="container">
+    <h1>Playground for trying different stuff in Astro.</h1>
+
+    <div>
+      <p>
+        This is a React component rendered in Astro. It's a simple counter
+        component.
+      </p>
+      <Counter client:load />
+      {
+        /* This is a React component and client:load is used to load it on the client side to get interactivity */
+      }
+    </div>
+  </section>
+</Layout>
