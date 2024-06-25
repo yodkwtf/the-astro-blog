@@ -1,3 +1,11 @@
+---
+interface MetaDataProps {
+  headTitle: string;
+}
+
+const { headTitle = 'The Astro Blog' } = Astro.props as MetaDataProps;
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Astro Crash Course</title>
+    <title>{headTitle}</title>
   </head>
   <body>
     <slot />
