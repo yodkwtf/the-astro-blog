@@ -1,4 +1,7 @@
 ---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+
 interface MetaDataProps {
   headTitle: string;
 }
@@ -21,6 +24,7 @@ const { headTitle = 'The Astro Blog' } = Astro.props as MetaDataProps;
     <title>{headTitle}</title>
   </head>
   <body>
+    <Header />
     <slot />
   </body>
 </html>
