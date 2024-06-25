@@ -1,4 +1,6 @@
 ---
+import Layout from '../layouts/Layout.astro';
+
 const user = {
   name: 'John',
   age: 25,
@@ -14,7 +16,7 @@ const isVisible = true;
 ---
 
 <!--# markup -->
-<>
+<Layout>
   <h1>Hello {user.name}!</h1>
 
   <ul>
@@ -28,7 +30,7 @@ const isVisible = true;
   {isVisible && <p>Visible</p>}
 
   {isVisible ? <p>I am Visible</p> : <p>I am not visible</p>}
-</>
+</Layout>
 
 <!--# styles -->
 <style>
