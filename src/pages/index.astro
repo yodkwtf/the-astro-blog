@@ -4,6 +4,10 @@ const user = {
   age: 25,
 };
 
+// get some data
+const repoRes = await fetch('https://api.github.com/users/yodkwtf/repos');
+const repos = await repoRes.json();
+
 const listItems = ['item1', 'item2', 'item3'];
 const listItemClass = 'list-item';
 const isVisible = true;
@@ -15,6 +19,10 @@ const isVisible = true;
 
   <ul>
     {listItems.map((item) => <li class={listItemClass}>{item}</li>)}
+  </ul>
+
+  <ul>
+    {repos.map((repo) => <li>{repo.name}</li>)}
   </ul>
 
   {isVisible && <p>Visible</p>}
