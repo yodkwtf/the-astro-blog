@@ -1,9 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
 
 export const getStaticPaths = async () => {
-  const posts = await Astro.glob('../blogs/*md');
+  const posts = await Astro.glob('../../blogs/*md');
   const singlePostData = posts.map((post) => ({
     params: { slug: post.frontmatter.slug },
     props: { post },
@@ -19,7 +19,7 @@ const { Content, frontmatter } = await Astro.props.post;
   <div class="page-content">
     <div class="container">
       <Card>
-        <a href="/blog" class="btn">Go Back</a>
+        <a href="/blogs" class="btn">Go Back</a>
         <h2>{frontmatter.title}</h2>
         <div>
           Written by <strong>{frontmatter.author}</strong> on {

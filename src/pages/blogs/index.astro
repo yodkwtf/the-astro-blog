@@ -1,9 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Showcase from '../components/Showcase.astro';
-import Card from '../components/Card.astro';
+import Layout from '../../layouts/Layout.astro';
+import Showcase from '../../components/Showcase.astro';
+import Card from '../../components/Card.astro';
 
-const posts = await Astro.glob('../blogs/*.md');
+const posts = await Astro.glob('../../blogs/*.md');
 ---
 
 <Layout headTitle="Astro Blog">
@@ -22,7 +22,7 @@ const posts = await Astro.glob('../blogs/*.md');
               {new Date(post.frontmatter.date).toLocaleDateString()}
             </div>
             <p>{post.frontmatter.excerpt}</p>
-            <a class="btn" href={post.frontmatter.slug}>
+            <a class="btn" href={`/blogs/${post.frontmatter.slug}`}>
               Read more
             </a>
           </Card>
