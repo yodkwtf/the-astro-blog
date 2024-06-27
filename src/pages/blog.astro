@@ -17,6 +17,10 @@ const posts = await Astro.glob('../blogs/*.md');
         posts.map((post) => (
           <Card>
             <h3>{post.frontmatter.title}</h3>
+            <div>
+              Written by <strong>{post.frontmatter.author}</strong> on{' '}
+              {new Date(post.frontmatter.date).toLocaleDateString()}
+            </div>
             <p>{post.frontmatter.excerpt}</p>
             <a class="btn" href={post.frontmatter.slug}>
               Read more
