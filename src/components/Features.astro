@@ -23,7 +23,14 @@ const features = [
 
 <section class="features">
   <div class="container">
-    {features.map((card) => <Card card={card} />)}
+    {
+      features.map((card) => (
+        <Card>
+          <h3>{card.title}</h3>
+          <p>{card.description}</p>
+        </Card>
+      ))
+    }
   </div>
 </section>
 
