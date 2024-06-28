@@ -7,7 +7,7 @@ export interface MetaDataProps {
   headTitle: string;
 }
 
-const { headTitle = 'The Astro Blog' } = Astro.props as MetaDataProps;
+const { headTitle = 'The Tech Blog' } = Astro.props as MetaDataProps;
 ---
 
 <!doctype html>
@@ -23,6 +23,42 @@ const { headTitle = 'The Astro Blog' } = Astro.props as MetaDataProps;
       rel="stylesheet"
     />
     <title>{headTitle}</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Explore comprehensive cheatsheets and notes for various tech stacks, all in markdown format."
+    />
+    <meta
+      name="keywords"
+      content="Tech Blog, Cheatsheets, Markdown, Programming, Tech Stacks, Notes, Tutorials"
+    />
+    <meta name="author" content="The Tech Blog" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The Tech Blog" />
+    <meta
+      property="og:description"
+      content="Explore comprehensive cheatsheets and notes for various tech stacks, all in markdown format."
+    />
+    <meta property="og:image" content="https://your-site.com/og-image.jpg" />
+    <meta property="og:url" content="https://your-site.com" />
+    <meta property="og:site_name" content="The Tech Blog" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Tech Blog" />
+    <meta
+      name="twitter:description"
+      content="Explore comprehensive cheatsheets and notes for various tech stacks, all in markdown format."
+    />
+    <meta
+      name="twitter:image"
+      content="https://your-site.com/twitter-image.jpg"
+    />
+    <meta name="twitter:site" content="@your-twitter-handle" />
+    <meta name="twitter:creator" content="@your-twitter-handle" />
   </head>
   <body>
     <Header />
