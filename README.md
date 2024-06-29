@@ -4,7 +4,7 @@ This repository contains the source code for The Astro Tech Blog, a website buil
 
 ## Live Preview
 
-Please visit [thetechblog-dk.netlify.app](thetechblog-dk.netlify.app) to see the live preview of the site.
+Please visit [thetechblog-dk.netlify.app](https://thetechblog-dk.netlify.app) to see the live preview of the site.
 
 ![The Astro Tech Blog](/public/og-image.png)
 
